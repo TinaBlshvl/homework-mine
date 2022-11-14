@@ -1,0 +1,101 @@
+.hero {
+    // min-width: 480px;
+    max-width: 768px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: var(--liner-gradient),
+        url(../imges/bg-mob.jpg);
+    @include retina {
+        background-image: var(--liner-gradient),
+        url(../imges/bg-mob-2x.jpg);
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: var(--liner-gradient),
+        url(../imges/bg-tab.jpg);
+        min-width: 768px;
+        max-width: 1200px;
+        height: 400px;
+        // padding: 118px 204px 198px 204px;
+        @include retina {
+            background-image: var(--liner-gradient),
+            url(../imges/bg-tab-2x.jpg);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image: var(--liner-gradient),
+        url(../imges/bg-desc.jpg);
+        min-width: 1200px;
+        max-width: 1600px;
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        @include retina {
+            background-image: var(--liner-gradient),
+            url(../imges/bg-desc-2x.jpg);
+        }
+    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    padding-top: 118px;
+    padding-bottom: 118px;
+}
+
+.hero__title {
+    color: var(--white-color);
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        @include font(900, 22px, 1.36, 0.06em);
+        max-width: 696px;
+    }
+
+    @include font(900, 26px, 1.61, 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 360px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+        @include font(900, 44px, 1.36, 0.06em);
+        max-width: 696px;
+    }
+}
+
+.hero__btn {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+
+    min-width: 200px;
+    height: 50px;
+    left: 692px;
+    top: 430px;
+
+    @media screen and (min-width: 1200px) {
+        min-width: 216px;
+    }
+
+    @include font(700, 16px, 1.87, 0.06em);
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    height: 50px;
+
+    display: block;
+    margin: 0 auto;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero__btn:hover,
+.hero__btn:focus {
+    background-color: #188CE8;
+}

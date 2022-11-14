@@ -1,0 +1,226 @@
+.footer {
+    background-color: #2F303A;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.address-list__address,
+.address-list__mail {
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px){
+        margin-bottom: 9px;
+    }
+}
+
+.footer-section {
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+.address-list {
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
+}
+
+.address-list__link,
+.address .link {
+    line-height: 1.71;
+}
+
+.address .link {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+}
+
+.address-list__link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.contacts-soc {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+        gap: 70px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        gap: 165px;
+    }
+}
+
+.footer__logo {
+
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+
+    @include font(700, 26px, 1.19, null);
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 0;
+        display: block;
+    }
+}
+
+.footer .link:hover,
+.footer .link:focus {
+    color: var(--accent-color);
+}
+
+.footer .link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-soc__list {
+    @include display();
+    gap: 10px;
+
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
+}
+
+.footer-soc__link {
+    width: 100%;
+    height: 100%;
+
+    @include display();
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #43444D;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-icons {
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+}
+
+.footer-soc__icon {
+    fill: var(--white-color);
+}
+
+.footer-soc__link:hover,
+.footer-soc__link:focus {
+    background-color: var(--accent-color);
+}
+
+.footer-soc__title {
+    @include font(null, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+
+    color: var(--white-color);
+
+    margin-bottom: 20px;
+}
+
+.footer>.container {
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+        @include display($ai: baseline, $jc: space-between);
+    }
+}
+
+.footer-form__container {
+    @media screen and (max-width: 1199px) {
+        @include display ();
+        text-align: center;
+        flex-direction: column;
+    }
+}
+.footer-form {
+    @media screen and (max-width: 1199px) {
+        @include display ();
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.footer-form__email {
+    @media screen and (max-width: 479px) {
+        width: 100%;
+    }
+    width: 450px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    border-radius: 4px;
+    color: var(--white-color);
+
+    padding-left: 16px;
+
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
+}
+
+.footer-form__email::placeholder {
+    @include font(400, 16px, 1.25, null);
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form__btn {
+    width: 200px;
+    height: 50px;
+
+    background-color: var(--accent-color);
+    border-radius: 4px;
+
+    align-items: center;
+    justify-content: center;
+    @include display($df:null);
+
+    margin-left: 12px;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon__title {
+    @include font(null, 16px, 1.87, 0.06em);
+
+    color: var(--white-color);
+
+    margin-left: 12px;
+}
+
+.footer-icon {
+    @include display();
+
+    gap: 10px;
+}
+
+.footer-form__btn:hover,
+.footer-form__btn:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-icon__svg {
+    fill: var(--white-color);
+}

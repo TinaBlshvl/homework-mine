@@ -1,0 +1,136 @@
+.mob-modal {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.mob-modal__open {
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+
+    right: 0;
+    position: absolute;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mob-modal__close {
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    padding: 0;
+
+    display: flex;
+    top: 21px;
+    right: 25px;
+    position: absolute;
+}
+
+.mob-modal__close:hover,
+.mob-modal__close:focus,
+.mob-modal__open:hover,
+.mob-modal__open:focus {
+    fill: var(--accent-color);
+}
+
+.backdrop-menu.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.backdrop-menu {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    // @media screen and (max-width: 479px) {
+    //     padding: 40px 40px;
+    // }
+
+    padding: 48px 40px;
+
+    z-index: 1;
+
+    @media screen and(min-width: 768px) {
+        display: none;
+    }
+}
+
+.mob-nav__link {
+    @media screen and (max-width: 479px) {
+      @include font(500, 35px, 1.17, 0.02em);  
+    }
+    @include font(500, 40px, 1.17, 0.02em);
+    color: var(--title-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-nav__item {
+    margin-bottom: 32px;
+}
+
+.mob-nav__link:hover,
+.mob-nav__link:focus {
+    color: var(--accent-color);
+}
+
+.mob-nav__item .current {
+    color: var(--accent-color);
+}
+
+.mob-tel {
+    @media screen and (max-width: 479px) {
+       @include font(500, 24px, 1.17, 0.02em); 
+    }
+    @include font(500, 34px, 1.17, 0.02em);
+    color: var(--accent-color);
+}
+
+.mob-mail {
+    @include font(500, 24px, 1.16, 0.02em);
+    color: var(--text-color);
+}
+
+.mob-tel__item {
+    margin-bottom: 32px;
+}
+
+.mob-mail__item {
+    margin-bottom: 64px;
+}
+
+.mob-soc {
+    display: flex;
+    gap: 8px;
+}
+
+.mob-soc__link {
+    @media screen and (max-width: 479px) {
+        @include font(500, 11px, 1.22, 0.02em);
+    }
+    @include font(500, 18px, 1.22, 0.02em);
+    color: var(--accent-color);
+}
+
+.mob-soc__item:not(:last-child)::after {
+    content: '';
+    width: 22px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+
+    @media screen and (max-width: 479px) {
+        display: none;
+    }
+    margin-right: 10px;
+    margin-left: 10px;
+}

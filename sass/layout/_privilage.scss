@@ -1,0 +1,45 @@
+.privilage {
+    padding-bottom: 0;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
+}
+.privilage-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.privilage__item {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px) / 4);
+    }
+}
+
+.privilage__title {
+    @include font(null, 14px, 1.14, null);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.privilage__text {
+    color: var(--text-color);
+    line-height: 1.71;
+}
+
+.privilage__soc {
+    height: 120px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    border-radius: 4px;
+
+    @include display();
+}
